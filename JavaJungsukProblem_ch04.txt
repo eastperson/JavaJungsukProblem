@@ -1,0 +1,190 @@
+[4-1] [정답]
+
+1. int x > 10 && x< 20
+2. char ch != ' ' || ch != '\t'
+3. char ch == 'x' || ch == 'X'
+4. char ch >= '0' && ch <=9
+5. char ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z'
+6. int year % 400 == 0 || year % 4 == 0 && year % 100 != 0
+7. !(boolen powerOn == false)
+8. String str.eqauls("yes")
+
+[4-2] [정답]
+
+int sum = 0;
+for(int i =1; i <= 20; i++){
+	if(i % 2 == 0 || i %3 == 0) {
+		continue;
+	}
+	else {
+		sum = sum + i;
+	}
+
+System.out.println(sum);
+
+73
+
+[4-3] [정답]
+
+int sum = 0;
+for(int i = 1; i <= 11; i++) {
+	for(int j = 1; j <= i - 1; j++) {
+		sum = sum + j; 
+	}
+}
+System.out.println(sum);
+
+220
+
+[4-4] [틀림]
+int i = 0;
+int sum = 0;
+while(sum <= 100) {    // =빼자.
+	i++;
+	if(i % 2 == 0) {
+		sum = sum - i;
+	}
+	else {
+		sum = sum + i;
+	}
+}
+System.out.println(i);
+
+201
+
+[4-5] [정답]
+
+int i = 0;
+int j = 0;
+while(i <= 10){
+	i++;
+	while(j <= i) {
+		j++;
+		System.out.print("*");
+	}
+	System.out.println();
+}
+
+[4-6] [정답]
+
+public static void main(String[] args) {	
+	for(int i = 1; i <= 6; i++) {
+		for(int j = 1; j <= 6; j++) {
+			if(i + j == 6) {
+				System.out.printf("%d와 %d", i, j);
+				System.out.println();
+				continue;
+			}
+			else {
+				continue;
+			}
+		}
+	}
+}
+}
+
+>
+1와 5
+2와 4
+3와 3
+4와 2
+5와 1
+<
+
+[4-7] [정답]
+
+(int) (Math.random() * 6) + 1
+
+[4-8] [정답]
+
+
+public static void main(String[] args) {
+	for(int x = 0; x < 6; x++) {
+		for(int y = 0; y < 3; y++) {
+			if(2*x + 4*y == 10) {
+			System.out.printf("x=%d, y=%d", x, y);
+			System.out.println();
+			}
+		}
+	}
+}
+
+[4-9] [정답]
+
+	String str = "12345";
+	int sum = 0;
+	for(int i=0; i < str.length(); i++) {
+		int A = (str.charAt(i) - '0');
+		sum = sum + A;
+	}
+	System.out.println("sum="+sum);
+
+
+
+[4-10] [정답]
+
+		int A = 0;
+		while(num != 0) {
+			A = num % 10;
+			sum = sum + A;
+			num = num / 10;
+		}
+
+[4-11] [정답]
+
+		num3 = num1 + num2;
+		num1 = num2;
+		num2 = num3;
+		System.out.printf(", %d", num3);
+}
+
+
+[4-12] [중간]
+
+
+	for (int i = 2 ; i < 10 ; i++ ) {
+		for(int j =1; j < 4; j++) {
+			System.out.printf("%d*%d=" + i*j,i,j);
+			System.out.println();
+		}
+	System.out.println();
+	}
+
+
+[4-13] [정답]
+
+		ch = value.charAt(i);
+		
+		if('0' <= ch && ch < 'A') {
+			isNumber = true;
+		}
+		else {
+			isNumber = false;
+			break;
+		}
+
+
+[4-14]
+
+(int) (Math.random() * 10 + 1)
+
+
+		if ( input < answer) {
+			System.out.println("더 큰 수를 입력하세요.");
+		}
+		else if (input > answer) {
+			System.out.println("더 작은 수를 입력하세요.");
+		}
+		else {
+			System.out.println("맞췄습니다.");
+			System.out.printf("시도횟수는 %d번입니다.", count);
+			break;
+		}
+
+
+[4-15] [정답]
+
+
+		result = result * 10;
+		result = result + tmp % 10;
+		tmp = tmp / 10;
