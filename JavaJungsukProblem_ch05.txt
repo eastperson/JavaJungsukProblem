@@ -1,0 +1,110 @@
+[5-1]
+
+a. x, int[] arr;
+b.X, int[] arr = {1,2,3};
+c.O
+d.X, int[] arr = new int {1,2,3,4,5};
+e.X, int arr = new int[5];
+f.iX, int[][] arr = new int[3][N]
+
+
+
+[5-2]
+
+4
+
+[5-3]
+
+for(int i=0; i < arr.length; i++) {
+	sum += arr[i];
+}
+System.out.println("sum="+sum);
+
+[5-4]
+
+int[][] arr = {
+		{ 5, 5, 5, 5, 5},
+		{10,10,10,10,10},
+		{20,20,20,20,20},
+		{30,30,30,30,30}
+		};
+int total = 0;
+float average = 0;
+int count = 0;
+for(int i = 0; i < arr.length; i++) {
+	for(int j = 0; j < arr[i].length; j++) 
+	{
+	total += arr[i][j];
+	count = count + 1;
+	}
+}
+average = total / (float) count;
+
+System.out.println("total="+total);
+System.out.println("average="+average);
+
+
+[5-5]
+
+int[] ballArr = {1,2,3,4,5,6,7,8,9};
+int[] ball3 = new int[3];
+// ballArr . 배열 의 임의의 요소를 골라서 위치를 바꾼다
+for(int i=0; i< ballArr.length;i++) {
+int j = (int)(Math.random() * ballArr.length);
+int tmp = 0;
+
+tmp = ballArr[0];
+ballArr[0] = ballArr[j];
+ballArr[j] = tmp;
+	
+}
+		
+ball3 = Arrays.copyOfRange(ballArr, 0, 3);
+
+
+[5-6]
+
+for(int i=0;i<coinUnit.length;i++) {
+	System.out.printf("%d원: %d%n",coinUnit[i], money / coinUnit[i]);
+	money = money % coinUnit[i];
+}
+
+
+[5-7]
+
+
+	coinNum = money / coinUnit[i];
+	if(coinNum > coin[i]) {
+		coinNum = coin[i];
+		money -= coinUnit[i]*coin[i];
+		coin[i] = 0;
+	}
+	else if(coinNum <= coin[i]) {
+		coin[i] = coin[i] - coinNum;
+		money -=(coinUnit[i]*coinNum);
+	}
+	else {
+		System.out.println("이건 무슨 경우의 수냐");
+	}
+			
+
+[5-8]
+
+
+
+[5-9]
+
+result[j][result[i].length - 1 - i] = star[i][j];
+
+[5-10]
+
+		if('a' <= ch && ch <= 'z') {
+			result = result + abcCode[(int) (ch - 'a')];
+		}
+		
+		else if('0' <= ch && ch <= '9') {
+			result = result + numCode[(int) (ch - '0')];
+		}
+
+[5-11]
+
