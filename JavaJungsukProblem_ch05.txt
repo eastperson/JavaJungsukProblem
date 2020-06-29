@@ -1,26 +1,26 @@
-[5-1]
+[5-1] [틀림]
 
-a. x, int[] arr;
-b.X, int[] arr = {1,2,3};
+a. x, int[] arr; [틀림 : int[] arr[];도 맞는 표현임]
+b.X, int[] arr = {1,2,3}; [틀림 : 마지막 , 가 있어도 상관 없음]
 c.O
-d.X, int[] arr = new int {1,2,3,4,5};
-e.X, int arr = new int[5];
-f.iX, int[][] arr = new int[3][N]
+d.X, int[] arr = new int {1,2,3,4,5}; [두 번째 대괄호에는 숫자를 넣으면 안됨]
+e.X, int arr = new int[5]; [배열을 선언할 때는 배열의 크기를 지정할 수 없음]
+f.iX, int[][] arr = new int[3][N] [틀림 : int[] arr[] = new int [3] [];도 맞는 표현임]
 
 
 
-[5-2]
+[5-2] [틀림]
 
-4
+4 [틀림 : 공백은 배열으로 치지 않는다.]
 
-[5-3]
+[5-3] [정답]
 
 for(int i=0; i < arr.length; i++) {
 	sum += arr[i];
 }
 System.out.println("sum="+sum);
 
-[5-4]
+[5-4] [음..정답]
 
 int[][] arr = {
 		{ 5, 5, 5, 5, 5},
@@ -30,6 +30,7 @@ int[][] arr = {
 		};
 int total = 0;
 float average = 0;
+
 int count = 0;
 for(int i = 0; i < arr.length; i++) {
 	for(int j = 0; j < arr[i].length; j++) 
@@ -44,7 +45,7 @@ System.out.println("total="+total);
 System.out.println("average="+average);
 
 
-[5-5]
+[5-5] [애매..답은 맞은듯]
 
 int[] ballArr = {1,2,3,4,5,6,7,8,9};
 int[] ball3 = new int[3];
@@ -62,7 +63,7 @@ ballArr[j] = tmp;
 ball3 = Arrays.copyOfRange(ballArr, 0, 3);
 
 
-[5-6]
+[5-6] [정답]
 
 for(int i=0;i<coinUnit.length;i++) {
 	System.out.printf("%d원: %d%n",coinUnit[i], money / coinUnit[i]);
@@ -70,7 +71,7 @@ for(int i=0;i<coinUnit.length;i++) {
 }
 
 
-[5-7]
+[5-7] [정답]
 
 
 	coinNum = money / coinUnit[i];
@@ -79,24 +80,20 @@ for(int i=0;i<coinUnit.length;i++) {
 		money -= coinUnit[i]*coin[i];
 		coin[i] = 0;
 	}
-	else if(coinNum <= coin[i]) {
+	else (coinNum <= coin[i]) {
 		coin[i] = coin[i] - coinNum;
 		money -=(coinUnit[i]*coinNum);
-	}
-	else {
-		System.out.println("이건 무슨 경우의 수냐");
-	}
-			
+	}	
 
-[5-8]
+[5-8] [실패]
 
 
 
-[5-9]
+[5-9] [정답]
 
 result[j][result[i].length - 1 - i] = star[i][j];
 
-[5-10]
+[5-10] [정답]
 
 		if('a' <= ch && ch <= 'z') {
 			result = result + abcCode[(int) (ch - 'a')];
@@ -106,5 +103,63 @@ result[j][result[i].length - 1 - i] = star[i][j];
 			result = result + numCode[(int) (ch - '0')];
 		}
 
-[5-11]
+[5-11] [실패]
+
+
+[5-12] [정답]
+
+import java.util.Scanner;
+
+class Ex5_8 {
+	public static void main(String[] args) {
+		String[] [] words = {
+				{"chair", "의자"},
+				{"computer", "컴퓨터"},
+				{"integer", "정수"}
+		};
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int K = 0;
+		
+		for(int i=0; i < words.length; i++) {
+			System.out.printf("Q%d. %s의 뜻은?", i+1, words[i][0]);
+			
+			String tmp = sc.nextLine();
+		
+			if(tmp.equals(words[i][1])) {
+			System.out.printf("정답입니다.%n%n");
+			K++;
+			} else {
+				System.out.printf("틀렸습니다. 정답은 %s입니다.%n%n", words[i][1]);
+			}
+		}
+		System.out.printf("전체 %d문제 중 %d문제 맞추셨습니다.", words.length, K);
+	}
+}
+
+[5-13] [정답]
+
+	char tmp = ' ';
+	
+	for(int j = 0; j < 100; j++) {
+	int K = (int) (Math.random() * question.length);
+	tmp = question[0];
+	question[0] = question[K];
+	question[K] = tmp;
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
