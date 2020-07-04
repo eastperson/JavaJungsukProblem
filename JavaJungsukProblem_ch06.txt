@@ -1,0 +1,30 @@
+[6-1]
+
+class SutdaCard {
+	
+	public static void main(String[] args) {
+
+	int[] deck = new int[9]
+	boolean isKwang = false;
+
+	for(int i = 1; i < 10; i++) {
+		deck[i] = i;
+	}
+	
+	int num = deck[Math.random()*9 + 1]
+
+	
+	int kwang = 10;
+	deck[Math.random()*9 + 1] = 10;
+	
+	for(int i = 1; i < 10, i++) {
+	if(deck(Math.random()*9 + 1) == kwang; {
+		isKwang = true;
+		System.out.printf("광입니다.");
+	}
+	else {
+		System.out.print("광이 아닙니다.");
+	}
+	}
+}
+}
